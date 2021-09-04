@@ -34,6 +34,7 @@ class Credentials:
   '''
   class that generate credentials objects
   '''
+  credentials_list = []
   def __init__(self, account, username, password):
     '''
     method that helps us define properties for our credential objects
@@ -42,7 +43,11 @@ class Credentials:
     self.username = username
     self.passwword = password
   
-  
+  def save_credentials(self):
+    '''
+    method to save credential object into credential_list
+    '''
+    Credentials.credentials_list.append(self)
 
 
   # @classmethod
