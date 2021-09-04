@@ -1,7 +1,8 @@
 import unittest 
 from password import User
+from password import Credentials
 
-class TestClass(unittest.TestCase):
+class TestUser(unittest.TestCase):
   '''
   test case for the classes behaviours
   '''
@@ -24,7 +25,7 @@ class TestClass(unittest.TestCase):
     '''
     User.user_list = []
 
-  def test_save_user_details(self):
+  def test_save_user(self):
     '''
     test if the user objec is saved in the user list
     '''
@@ -52,29 +53,20 @@ class TestClass(unittest.TestCase):
     self.new_user.delete_user()
     self.assertEqual(len(User.user_list), 1)
 
-  def test_find_user_by_username(self):
+
+class TestCredentials(unittest.TestCase):
+  '''
+  test class to defime test case for credentials class
+  '''
+  def setUp(self):
     '''
-    check if we can find user by their username and display their information
+    method to run before each credential test case
     '''
-    self.new_user.save_user()
-    new_user1 = User('shiku', '1998')
-    new_user1.save_user()
+    self.new_credential = Credentials('LMS', 'ikinoti', '12qwerty34')
 
-    found_user = User.find_by_username('shiku')
-    self.assertEqual(found_user.username, new_user1.username)
+    
 
-  def test_user_exists(self):
-    '''
-    test case to check if we can return a boolean if we cannot find the contact
-    '''
-
-    self.new_user.save_user()
-    new_user1 = User('shiku', '1998')
-    new_user1.save_user()
-
-    user_exists = User.user_exist("shiku")
-
-    self.assertTrue(user_exists)
+  
 
 if __name__ == '__main__':
   unittest.main()
