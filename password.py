@@ -65,12 +65,12 @@ class Credentials:
       if cred.account == account:
         return cred
 
-  # @classmethod
-  # def user_exist(cls, username):
-  #   '''
-  #   method to check if user acc exist in the user list
-  #   '''
-  #   for user in cls.user_list:
-  #     if user.username == username:
-  #       return True
-  #   return False
+  @classmethod
+  def credential_exists(cls, account):
+    '''
+    method to check if user acc exist in the user list
+    '''
+    for cred in cls.credentials_list:
+      if cred.account == account:
+        return True
+    return False
