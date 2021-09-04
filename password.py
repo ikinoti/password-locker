@@ -49,6 +49,12 @@ class Credentials:
     '''
     Credentials.credentials_list.append(self)
 
+  def delete_credential(self):
+    '''
+    method to delete saved contact from the user list
+    '''
+    Credentials.credentials_list.remove(self)
+
 
   # @classmethod
   # def find_by_username(cls, username):
