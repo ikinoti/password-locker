@@ -1,3 +1,6 @@
+import random
+import string
+
 class User:
   '''
   class that generate user objects
@@ -74,3 +77,25 @@ class Credentials:
       if cred.account == account:
         return True
     return False
+
+  @classmethod
+  def show_credentials(cls):
+    '''
+    method that returns the credential list
+    '''
+
+    return cls.credentials_list
+
+  def passwordGenerator():
+    '''
+    method to generate a random password
+
+    '''
+    print("We are glad to generate a strong password for you")
+
+    passwordLength = int(input('\nEnter the length of password: '))
+
+    all = string.ascii_letters + string.digits + "!@#$%^&*()"
+    password = ''.join(random.sample(all, passwordLength))
+
+    return(password)
