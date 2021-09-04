@@ -39,6 +39,19 @@ class Credentials:
   class that generate credentials objects
   '''
   credentials_list = []
+
+  @classmethod
+  def check_valid_login(cls, username, password):
+    '''
+    method to check where user is in our user_list
+    '''
+    userL = ""
+    for userN in User.user_list:
+      if(userN.username == username and userN.password == password):
+        userL == userN.ussername
+    return userL
+
+
   def __init__(self, account, username, password):
     '''
     method that helps us define properties for our credential objects
