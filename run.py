@@ -73,3 +73,10 @@ def verify_credentials(account):
   '''
 
   return Credentials.verify_credential_exists(account)
+
+def generate_random_password():
+  '''
+  function to generate a random password
+  '''
+  random_password = Credentials.passwordGenerator()
+  return random_password
