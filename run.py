@@ -26,3 +26,19 @@ def show_user():
   '''
   function to show existing user
   '''
+  return User.show_user()
+
+def user_login(username, password):
+  '''
+  function to check if our user exist in our list and then login in that user
+  '''
+
+  confirm_user = Credentials.check_valid_login(username, password)
+  return confirm_user
+
+def register_new_credential(account, username, password):
+  '''
+  function to register a new credetial of a given account
+  '''
+  new_credential = Credentials(account, username, password)
+  return new_credential
