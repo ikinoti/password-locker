@@ -49,4 +49,14 @@ def save_credentials(credentials):
   '''
   credentials.save_credentials
 
+def show_account_info():
+  '''
+  function to display user account information
+  '''
+  return Credentials.show_credentials()
 
+def delete_credential(credentials):
+  '''
+  function to delete a credential from cred list
+  '''
+  credentials.delete_credentials()
