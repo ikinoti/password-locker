@@ -80,3 +80,10 @@ def generate_random_password():
   '''
   random_password = Credentials.passwordGenerator()
   return random_password
+
+def copy_password(account):
+  '''
+  a function to copy a password using pyperclip
+  '''
+
+  return Credentials.copy_password(account)
