@@ -59,4 +59,17 @@ def delete_credential(credentials):
   '''
   function to delete a credential from cred list
   '''
-  credentials.delete_credentials()
+  credentials.delete_credential()
+
+def search_credential(account):
+  '''
+  function to search for a credential if it exist
+  '''
+  return Credentials.find_by_account()
+
+def verify_credentials(account):
+  '''
+  function fo verify if a credential exist in our list
+  '''
+
+  return Credentials.verify_credential_exists(account)
