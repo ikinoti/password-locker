@@ -22,4 +22,7 @@ def save_user(user):
   '''
   user.save_user()
 
-
+def show_user():
+  '''
+  function to show existing user
+  '''
