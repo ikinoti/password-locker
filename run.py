@@ -42,3 +42,11 @@ def register_new_credential(account, username, password):
   '''
   new_credential = Credentials(account, username, password)
   return new_credential
+
+def save_credentials(credentials):
+  '''
+  function to user credential in the credential list
+  '''
+  credentials.save_credentials
+
+
