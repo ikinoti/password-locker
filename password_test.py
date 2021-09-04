@@ -1,4 +1,6 @@
-import unittest 
+import unittest
+
+import pyperclip 
 from password import User
 from password import Credentials
 
@@ -117,6 +119,16 @@ class TestCredentials(unittest.TestCase):
 
     found_credential = Credentials.find_by_account('Linkeld')
     self.assertEqual(found_credential.account, new_credential1.account)
+
+  # def test_copy_password(self):
+  #   '''
+  #   Test to confirm tht we are copying the password from a found credential
+  #   '''
+  #   self.new_credential.save_credentials()
+  #   Credentials.copy_password('12qwery34')
+
+  #   self.assertEqual(self.new_credential.passwword, pyperclip.paste())
+
 
   def test_credential_exists(self):
     '''
