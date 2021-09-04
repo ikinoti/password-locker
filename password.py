@@ -56,14 +56,14 @@ class Credentials:
     Credentials.credentials_list.remove(self)
 
 
-  # @classmethod
-  # def find_by_username(cls, username):
-  #   '''
-  #   method that take a username and returns a user object that matches that number
-  #   '''
-  #   for user in cls.user_list:
-  #     if user.username == username:
-  #       return user
+  @classmethod
+  def find_by_account(cls, account):
+    '''
+    method that take a account and returns a credential object that matches that number
+    '''
+    for cred in cls.credentials_list:
+      if cred.account == account:
+        return cred
 
   # @classmethod
   # def user_exist(cls, username):
