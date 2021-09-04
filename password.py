@@ -1,6 +1,6 @@
 class User:
   '''
-  class that generate new instance of user
+  class that generate user objects
   '''
   user_list = []
 
@@ -29,4 +29,37 @@ class User:
     '''
     User.user_list.remove(self)
 
+
+class Credentials:
+  '''
+  class that generate credentials objects
+  '''
+  def __init__(self, account, username, password):
+    '''
+    method that helps us define properties for our credential objects
+    '''
+    self.account = account
+    self.username = username
+    self.passwword = password
   
+  
+
+
+  # @classmethod
+  # def find_by_username(cls, username):
+  #   '''
+  #   method that take a username and returns a user object that matches that number
+  #   '''
+  #   for user in cls.user_list:
+  #     if user.username == username:
+  #       return user
+
+  # @classmethod
+  # def user_exist(cls, username):
+  #   '''
+  #   method to check if user acc exist in the user list
+  #   '''
+  #   for user in cls.user_list:
+  #     if user.username == username:
+  #       return True
+  #   return False
