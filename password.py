@@ -1,5 +1,6 @@
 import random
 import string
+import pyperclip
 
 class User:
   '''
@@ -67,6 +68,11 @@ class Credentials:
     for cred in cls.credentials_list:
       if cred.account == account:
         return cred
+
+  @classmethod
+  def copy_password(cls, account):
+    found_credentials = Credentials.find_by_account(account)
+    pyperclip.copy(found_credentials.password)
 
   @classmethod
   def credential_exists(cls, account):
