@@ -14,7 +14,7 @@ class TestUser(unittest.TestCase):
 
   def test_init(self):
     '''
-    test case to test if the object is initialized properly
+    test case to test if the user object is initialized properly
     '''
     self.assertEqual(self.new_user.username, 'ikinoti')
     self.assertEqual(self.new_user.password, '12qwerty34')
@@ -64,9 +64,40 @@ class TestCredentials(unittest.TestCase):
     '''
     self.new_credential = Credentials('LMS', 'ikinoti', '12qwerty34')
 
-    
+  def test_init(self):
+    '''
+    test case to test if the credential object is initialized properly
+    '''
+    self.assertEqual(self.new_credential.account, 'LMS')
+    self.assertEqual(self.new_credential.username, 'ikinoti')
+    self.assertEqual(self.new_credential.passwword, '12qwerty34')
 
   
 
 if __name__ == '__main__':
   unittest.main()
+
+
+  # def test_find_user_by_account(self):
+  #   '''
+  #   check if we can find user by their account and display their information
+  #   '''
+  #   self.new_user.save_user()
+  #   new_user1 = User('shiku', '1998')
+  #   new_user1.save_user()
+
+  #   found_user = User.find_by_username('shiku')
+  #   self.assertEqual(found_user.username, new_user1.username)
+
+  # def test_user_exists(self):
+  #   '''
+  #   test case to check if we can return a boolean if we cannot find the user account
+  #   '''
+
+  #   self.new_user.save_user()
+  #   new_user1 = User('shiku', '1998')
+  #   new_user1.save_user()
+
+  #   user_exists = User.user_exist("shiku")
+
+  #   self.assertTrue(user_exists)
