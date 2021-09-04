@@ -131,5 +131,11 @@ class TestCredentials(unittest.TestCase):
 
     self.assertTrue(cred_exists)
 
+  def test_show_all_credentials(self):
+    '''
+    method that returns a list of all contacts saved
+    '''
+    self.assertEqual(Credentials.show_gocredentials(), Credentials.credentials_list)
+
 if __name__ == '__main__':
   unittest.main()
