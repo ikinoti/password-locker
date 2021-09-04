@@ -17,27 +17,16 @@ class User:
     '''
     User.user_list.append(self)
 
+  @classmethod
+  def show_user(cls):
+    '''
+    method to show user saved in the list'''
+    return cls.user_list
+
   def delete_user(self):
     '''
     method to delete saved contact from the user list
     '''
     User.user_list.remove(self)
 
-  @classmethod
-  def find_by_username(cls, username):
-    '''
-    method that take a username and returns a user object that matches that number
-    '''
-    for user in cls.user_list:
-      if user.username == username:
-        return user
-
-  @classmethod
-  def user_exist(cls, username):
-    '''
-    method to check if user acc exist in the user list
-    '''
-    for user in cls.user_list:
-      if user.username == username:
-        return True
-    return False
+  
