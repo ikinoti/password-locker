@@ -118,21 +118,18 @@ class TestCredentials(unittest.TestCase):
     found_credential = Credentials.find_by_account('Linkeld')
     self.assertEqual(found_credential.account, new_credential1.account)
 
+  def test_credential_exists(self):
+    '''
+    test case to check if we can return a boolean if we can or cannot find the user account
+    '''
+
+    self.new_credential.save_credentials()
+    new_credential1 = Credentials('Linkeld', 'igitonga', '1234')
+    new_credential1.save_credentials()
+
+    cred_exists = Credentials.credential_exists("Linkeld")
+
+    self.assertTrue(cred_exists)
+
 if __name__ == '__main__':
   unittest.main()
-
-
-  
-
-  # def test_user_exists(self):
-  #   '''
-  #   test case to check if we can return a boolean if we cannot find the user account
-  #   '''
-
-  #   self.new_user.save_user()
-  #   new_user1 = User('shiku', '1998')
-  #   new_user1.save_user()
-
-  #   user_exists = User.user_exist("shiku")
-
-  #   self.assertTrue(user_exists)
