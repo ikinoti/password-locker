@@ -139,7 +139,7 @@ class TestCredentials(unittest.TestCase):
     new_credential1 = Credentials('Linkeld', 'igitonga', '1234')
     new_credential1.save_credentials()
 
-    cred_exists = Credentials.credential_exists("Linkeld")
+    cred_exists = Credentials.verify_credential_exists("Linkeld")
 
     self.assertTrue(cred_exists)
 
