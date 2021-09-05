@@ -10,17 +10,17 @@ This is a password locker application made of python. The application manages us
 
 ## Screenshot Demos
 
-<img src = "./assets/s1.png>
+<img src = "./assets/s1.png">
 
-<img src = "./assets/s2.png>
+<img src = "./assets/s2.png">
 
-<img src = "./assets/s3.png>
+<img src = "./assets/s3.png">
 
-<img src = "./assets/s4.png>
+<img src = "./assets/s4.png">
 
-<img src = "./assets/s5.png>
+<img src = "./assets/s5.png">
 
-<img src = "./assets/s6.png>
+<img src = "./assets/s6.png">
 
 ## Setup/Installation
 
