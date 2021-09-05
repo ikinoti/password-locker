@@ -48,7 +48,7 @@ class Credentials:
     userL = ""
     for userN in User.user_list:
       if(userN.username == username and userN.password == password):
-        userL == userN.ussername
+        userL == userN #.username
     return userL
 
 
@@ -78,9 +78,9 @@ class Credentials:
     '''
     method that take a account and returns a credential object that matches that number
     '''
-    for cred in cls.credentials_list:
-      if cred.account == account:
-        return cred
+    for acc in cls.credentials_list:
+      if acc.account == account:
+        return acc
 
   @classmethod
   def copy_password(cls, account):
@@ -88,7 +88,7 @@ class Credentials:
     pyperclip.copy(found_credentials.password)
 
   @classmethod
-  def credential_exists(cls, account):
+  def verify_credential_exists(cls, account):
     '''
     method to check if user acc exist in the user list
     '''
@@ -105,16 +105,16 @@ class Credentials:
 
     return cls.credentials_list
 
-  def passwordGenerator():
+  def passwordGenerator(length):
     '''
     method to generate a random password
 
     '''
     print("We are glad to generate a strong password for you")
 
-    passwordLength = int(input('\nEnter the length of password: '))
+    
 
     all = string.ascii_letters + string.digits + "!@#$%^&*()"
-    password = ''.join(random.sample(all, passwordLength))
+    password = ''.join(random.choice(all) for i in range(length))
 
     return(password)
